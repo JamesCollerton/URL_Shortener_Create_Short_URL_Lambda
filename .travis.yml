@@ -4,5 +4,6 @@ sudo: true
 before_install:
   - chmod +x mvnw
 script:
-  - ./mvnw clean install
-  - bash <(curl -s https://codecov.io/bash)
+#  - ./mvnw clean install
+  - mvn package
+#  - bash <(curl -s https://codecov.io/bash)
