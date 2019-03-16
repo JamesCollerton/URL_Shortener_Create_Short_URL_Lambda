@@ -23,3 +23,10 @@
 /dist/
 /nbdist/
 /.nb-gradle/
+
+### Terraform ###
+
+.terraform
+*.tfstate
+*.tfstate.backup
+*.tfvars
