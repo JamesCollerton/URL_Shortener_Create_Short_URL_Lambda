@@ -1,11 +1,23 @@
-variable "aws_s3_bucket_name" {
-  default 	= "url-shortener-shared-remote-state-backend"
-  description 	= "Name to be assigned to the S3 bucket"
-  type        	= "string"
+variable "lambda_function_filename" {
+  default = "url-shortener-create-short-url-lambda.zip"
+  description = "Name of the zip file we will upload as the lambda"
+  type = "string"
+}
+
+variable "lambda_function_name" {
+  default = "urlshortenercreateshorturllambda"
+  description = "Name we would like to assign to the lambda function"
+  type = "string"
+}
+
+variable "lambda_function_handler" {
+  default = "URLShortenerCreateShortURL::apply"
+  description = "The name of the method invoked in the lambda, given Class::method"
+  type = "string"
 }
 
 variable "aws_profile" {
-  default 	= "s3administrator"
+  default 	= "lambdaadministrator"
   description 	= "Profile to be used"
   type        	= "string"
 }
