@@ -8,7 +8,7 @@ import com.urlshortenercreateshorturllambda.urlshortenercreateshorturllambda.dom
 public class CreateShortURLHandler implements RequestHandler<Request, Response> {
 
     public Response handleRequest(Request request, Context context) {
-        CreateShortURL createShortURL = new CreateShortURL(request.getLongUrl());
-        return null;
+        return new CreateShortURL().apply(request.getLongUrl());
     }
+    
 }
