@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class CreateShortURLTest {
+public class CreateShortURLHandlerTest {
 
     @Test
     public void given_when_then() {
