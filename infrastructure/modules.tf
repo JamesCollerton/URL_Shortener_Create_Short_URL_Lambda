@@ -4,3 +4,4 @@ module "lambda" {
   lambda_function_name 		= "${var.lambda_function_name}" 
   lambda_function_handler 	= "${var.lambda_function_handler}" 
 }
+

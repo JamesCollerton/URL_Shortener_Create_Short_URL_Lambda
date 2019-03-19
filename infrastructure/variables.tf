@@ -5,7 +5,7 @@ variable "lambda_function_filename" {
 }
 
 variable "lambda_function_name" {
-  default = "urlshortenercreateshorturllambda"
+  default = "url-shortener-create-short-url-lambda"
   description = "Name we would like to assign to the lambda function"
   type = "string"
 }
