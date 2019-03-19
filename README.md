@@ -3,4 +3,4 @@
 
 # URL Shortener Create Short URL Lambda
 
-This is the Java Maven project for creating a short URL in the URL Shortener project. The responsibility of this lambda is to take in a request to 
+This is the Java Maven project for creating a short URL in the URL Shortener project. The responsibility of this lambda is to take in a request to create a shortened URL from a longer one.
