@@ -1,13 +1,7 @@
-terraform {
-  backend "s3" {
-    bucket               = "url-shortener-remote-state-bucket"
-    key                  = "shared-remote-state/lambdas/url-shortener-create-short-url/terraform.tfstate"
-    profile              = "s3administrator"
-    region               = "eu-west-1"
-  }
+module "lambda" {
+  source      		   	= "github.com/JamesCollerton/Terraform_Modules//lambda"
+  lambda_function_filename 	= "${var.lambda_function_filename}" 
+  lambda_function_name 		= "${var.lambda_function_name}" 
+  lambda_function_handler 	= "${var.lambda_function_handler}" 
 }
 
-provider "aws" {
-  profile = "${var.aws_profile}"
-  region  = "${var.aws_region}"
-}
