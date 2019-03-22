@@ -16,15 +16,3 @@ variable "lambda_function_handler" {
   type = "string"
 }
 
-variable "aws_profile" {
-  default 	= "lambdaadministrator"
-  description 	= "Profile to be used"
-  type        	= "string"
-}
-
-variable "aws_region" {
-  default 	= "eu-west-1"
-  description 	= "Region to be used"
-  type        	= "string"
-}
-
