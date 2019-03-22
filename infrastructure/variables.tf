@@ -1,5 +1,5 @@
 variable "lambda_function_filename" {
-  default = "url-shortener-create-short-url-lambda.zip"
+  default = "lambda-files/url-shortener-create-short-url-lambda.zip"
   description = "Name of the zip file we will upload as the lambda"
   type = "string"
 }
