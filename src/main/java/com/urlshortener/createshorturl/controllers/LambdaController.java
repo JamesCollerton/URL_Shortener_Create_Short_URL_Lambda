@@ -18,6 +18,10 @@ public class LambdaController {
     @Autowired
     private URLShortener urlShortener;
 
+    /*
+        TODO: Validate the request body
+        TODO: Map null to optional
+     */
     @GetMapping
     public ResponseEntity<ShortenedURLInformation> get(@RequestBody ShortenedURLInformation shortenedURLInformation) {
         System.out.println("In handler");
