@@ -15,12 +15,12 @@ public class URLShortenerImpl implements URLShortener {
     @Override
     public Optional<ShortenedURLInformation> apply(ShortenedURLInformation shortenedURLInformation) {
 
-        Optional<String> longUrl = shortenedURLInformation.getLongUrl();
+        Optional<String> longUrl = Optional.of(shortenedURLInformation.getLongUrl());
 
         // Still needs DB step
         return longUrl
                 .map(urlHasher)
-                .map(s -> new ShortenedURLInformation(longUrl, Optional.of(s)));
+                .map(s -> new ShortenedURLInformation(longUrl.get(), s));
 
     }
 
