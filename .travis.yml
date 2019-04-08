@@ -7,6 +7,7 @@ script:
   - ./mvnw clean install
   - pip install --user awscli
   - export PATH=$PATH:$HOME/.local/bin
-  - eval $(aws ecr get-login --no-include-email --region us-east-1) 
+  - eval $(aws ecr get-login --no-include-email --region us-west-1) 
+  - aws s3 ls s3://java-8-test-lambda-code-bucket
 after_success:
   - bash <(curl -s https://codecov.io/bash)
