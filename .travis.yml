@@ -11,6 +11,6 @@ script:
   - TODAY=`date '+%Y_%m_%d_%H_%M_%S'`
   - JAR_NAME="lamba-$TODAY.jar"
   - aws s3 ls s3://java-8-test-lambda-code-bucket
-  - eval $(aws s3 cp ./target/createshorturl-0.0.1-SNAPSHOT.jar s3://java-8-test-lambda-code-bucket/"$JAR_NAME" --sse --acl public-read)
+  - eval $(aws s3 cp ./target/createshorturl-0.0.1-SNAPSHOT.jar s3://java-8-test-lambda-code-bucket/"$JAR_NAME" --sse)
 after_success:
   - bash <(curl -s https://codecov.io/bash)
