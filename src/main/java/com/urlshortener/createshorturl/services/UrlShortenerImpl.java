@@ -1,7 +1,6 @@
 package com.urlshortener.createshorturl.services;
 
 import com.urlshortener.createshorturl.models.ShortenedUrlInformation;
-import com.urlshortener.createshorturl.repositories.ShortenedUrlInformationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
