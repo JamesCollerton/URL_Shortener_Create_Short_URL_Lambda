@@ -1,13 +1,12 @@
 package com.urlshortener.createshorturl.controllers;
 
-import com.urlshortener.createshorturl.models.ShortenedURLInformation;
-import com.urlshortener.createshorturl.services.URLShortener;
+import com.urlshortener.createshorturl.models.ShortenedUrlInformation;
+import com.urlshortener.createshorturl.services.UrlShortener;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,13 +19,13 @@ import java.util.Optional;
 public class LambdaController {
 
     @Autowired
-    private URLShortener urlShortener;
+    private UrlShortener urlShortener;
 
     @PostMapping
-    public ResponseEntity<ShortenedURLInformation> get(
-            @Validated @RequestBody ShortenedURLInformation shortenedURLInformation
+    public ResponseEntity<ShortenedUrlInformation> get(
+            @Validated @RequestBody ShortenedUrlInformation shortenedUrlInformation
     ) {
-        Optional<ShortenedURLInformation> response = urlShortener.apply(shortenedURLInformation);
+        Optional<ShortenedUrlInformation> response = urlShortener.apply(shortenedUrlInformation);
 
         return response.map(ResponseEntity::ok).orElse(ResponseEntity.badRequest().build());
     }
