@@ -1,0 +1,9 @@
+{
+    "ShortenedUrlInformation": {
+        "Keys": [
+            {
+                "id": {"S": "https://www.google.com/maps"}
+            }
+        ]
+    }
+}

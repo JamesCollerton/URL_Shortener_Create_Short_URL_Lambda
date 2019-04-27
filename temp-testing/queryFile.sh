@@ -1,0 +1,1 @@
+aws dynamodb scan --table-name ShortenedUrlInformation --filter-expression "longUrl = :a" --projection-expression "#ST, #AT" --expression-attribute-names file://expression-attribute-names.json --expression-attribute-values file://expression-attribute-values.json --region eu-west-1 --endpoint-url http://localhost:4569
