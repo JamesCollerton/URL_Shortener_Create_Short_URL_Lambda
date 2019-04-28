@@ -24,7 +24,7 @@ public class UrlShortenerImpl implements UrlShortener {
         // Still needs DB step
         return longUrl
                 .map(urlHasher)
-                .map(s -> new ShortenedUrlInformation("id", longUrl.get(), s))
+                .map(s -> new ShortenedUrlInformation(longUrl.get(), s))
                 .map(shortenedUrlInformationRepository::save);
 
     }
