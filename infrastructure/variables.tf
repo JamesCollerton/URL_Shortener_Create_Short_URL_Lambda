@@ -15,7 +15,7 @@ variable "lambda_function_name" {
 }
 
 variable "lambda_function_handler" {
-  default 	= "URLShortenerCreateShortURL::apply"
+  default 	= "com.urlshortener.createshorturl.StreamLambdaHandler::handleRequest"
   description 	= "The name of the method invoked in the lambda, given Class::method"
   type 		= "string"
 }
