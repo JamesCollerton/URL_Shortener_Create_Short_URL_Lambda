@@ -29,7 +29,7 @@ public class ShortenedUrlInformation {
     @DynamoDBAttribute
     @NotEmpty(message = "{longUrl.notEmpty}")
     private String longUrl;
-    
+
     @DynamoDBAttribute
     private String shortUrl;
 
